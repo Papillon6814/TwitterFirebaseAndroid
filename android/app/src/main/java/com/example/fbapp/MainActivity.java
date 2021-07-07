@@ -3,7 +3,9 @@ package com.example.fbapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -68,6 +70,8 @@ public class MainActivity extends AppCompatActivity {
                                     // authResult.getCredential().getAccessToken().
                                     // The OAuth secret can be retrieved by calling:
                                     // authResult.getCredential().getSecret().
+                                    Context context = getApplicationContext();
+                                    Toast.makeText(context , "ログインしました", Toast.LENGTH_LONG).show();
                                 }
                             })
                     .addOnFailureListener(
